@@ -21,7 +21,7 @@
 	"postCreateCommand": "curl -O https://dl.google.com/dl/cloudsdk/channels/
 	rapid/downloads/google-cloud-cli-linux-x86_64.tar.gz && tar -xf google-cloud-cli-linux-x86_64.tar.gz 
 	&& ./google-cloud-sdk/install.sh --disable-prompts 
-	&& sudo rm -rf google-cloud-cli*"
+	&& sudo rm -rf google-cloud-cli*" 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
 
