@@ -1,0 +1,8 @@
+[package]
+name = "rust-experiment"
+version = "0.1.0"
+authors = ["nishantmehta.n@gmail.com"]
+
+
+[dependencies]
+log = "0.4"
