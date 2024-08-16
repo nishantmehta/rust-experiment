@@ -2,7 +2,8 @@
 name = "rust-experiment"
 version = "0.1.0"
 authors = ["nishantmehta.n@gmail.com"]
-
+edition = "2021"
 
 [dependencies]
 log = "0.4"
+log4rs = "1"
