@@ -6,7 +6,9 @@
 	"image": "mcr.microsoft.com/vscode/devcontainers/rust:latest",
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
-	// "features": {},
+	// "features": {
+		"ghcr.io/dhoeric/features/google-cloud-cli:1": {}
+	},
 
 	// Configure tool-specific properties.
 	"customizations": {
