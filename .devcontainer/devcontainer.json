@@ -6,7 +6,9 @@
 	"image": "mcr.microsoft.com/vscode/devcontainers/rust:latest",
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
-	// "features": {},
+	"features": {
+		"ghcr.io/devcontainers/features/docker-in-docker:2": {}
+	},
 
 	// Configure tool-specific properties.
 	"customizations": {
@@ -18,7 +20,7 @@
 			]
 		}
 	},
-	"postCreateCommand": "curl -O https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-linux-x86_64.tar.gz && tar -xf google-cloud-cli-linux-x86_64.tar.gz && ./google-cloud-sdk/install.sh --disable-prompts && sudo rm google-cloud-cli*"
+	"postCreateCommand": "curl -O https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-linux-x86_64.tar.gz && tar -xf google-cloud-cli-linux-x86_64.tar.gz && ./google-cloud-sdk/install.sh --disable-prompts && rm google-cloud-cli*"
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
 
