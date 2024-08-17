@@ -1,4 +1,4 @@
 Cargo.lock
 target/*
 log/*
-google-cloud-sdk/*
+google-cloud-*
