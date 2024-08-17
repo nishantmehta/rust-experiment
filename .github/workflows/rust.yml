@@ -32,7 +32,7 @@ jobs:
         run: docker build -t gcr.io/$PROJECT_ID/$GKE_DEPLOYMENT_NAME:latest .
 
       - name: Configure Docker authentication
-        uses: google-github-actions/auth@v0
+        uses: google-github-actions/auth@v2
         with:
           credentials_json: ${{ secrets.GCP_SA_KEY }}
 
@@ -40,7 +40,7 @@ jobs:
         run: docker push gcr.io/$PROJECT_ID/$GKE_DEPLOYMENT_NAME:latest
 
       - name: Set up Google Cloud SDK
-        uses: google-github-actions/setup-gcloud@v0
+        uses: google-github-actions/setup-gcloud@v2
         with:
           service_account_key: ${{ secrets.GCP_SA_KEY }}
           project_id: $PROJECT_ID
