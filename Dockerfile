@@ -1,20 +1,13 @@
 # Use the official Rust base image as the builder stage
 FROM rust:latest
 
-# Set the working directory inside the container
-WORKDIR /app
+# 2. Copy the files in your machine to the Docker image
+COPY ./ ./
 
-COPY . .
-
-# Build the Rust application in release mode
+# Build your program for release
 RUN cargo build --release
 
-# Install necessary certificates
-RUN apt-get update && apt-get install -y --no-install-recommends ca-certificates
-
-
-# Expose the port your application listens on
 EXPOSE 8080
 
-# Specify the command to run when the container starts
-CMD ["./app/target/release/rust-experiment"]
+# Run the binary
+CMD ["./target/release/rust-experiment"]
